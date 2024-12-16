@@ -16,7 +16,8 @@
             //await Task.Delay(5000);
             foreach (Flight flight in flights)
             {
-                Console.WriteLine(flight.Route.Destinations.Count);
+                Console.WriteLine(flight.Id);
+                Console.WriteLine(flight.ToString());
             }
         }
     }

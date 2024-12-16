@@ -32,5 +32,15 @@ namespace API
         [JsonPropertyName("route")]
         public Route Route { get; set; } = new Route();
 
+        public override string ToString()
+        {
+            if (FlightDirection == 'A')
+            {
+                return $"This flight arrived at {actualLandingTime.ToString()}, arriving at Gate {Gate}.";
+            } else
+            {
+                return $"This flight arrived at {actualLandingTime.ToString()}, departing from Gate {Gate}.";
+            }
+        }
     }
 }
