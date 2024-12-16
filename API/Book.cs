@@ -11,15 +11,21 @@ namespace API
     {
         [JsonPropertyName("id")]
         public int Id { get; set; } = 0;
-        [JsonPropertyName("firstname")]
-        public string FirstName { get; set; } = "";
-        [JsonPropertyName("lastname")]
-        public string LastName { get; set; } = "";
-        [JsonPropertyName("email")]
-        public string Email { get; set; } = "";
-        [JsonPropertyName("phone")]
-        public string PhoneNumber { get; set; } = "";
-        [JsonPropertyName("birthday")]
-        public DateTime Birthday { get; set; }
+        [JsonPropertyName("title")]
+        public string Title { get; set; } = "";
+        [JsonPropertyName("author")]
+        public string Author { get; set; } = "";
+        [JsonPropertyName("genre")]
+        public string Genre { get; set; } = "";
+        [JsonPropertyName("description")]
+        public string Description { get; set; } = "";
+        [JsonPropertyName("published")]
+        public DateTime Published { get; set; }
+        [JsonPropertyName("isbn")]
+        public string ISBN { get; set; } = "";
+        [JsonPropertyName("image")]
+        public string ImageLink { get; set; } = "";
+        [JsonPropertyName("publisher")]
+        public string Publisher { get; set; } = "";
     }
 }
