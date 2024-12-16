@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace API
 {
-    internal class Response
+    internal class BookResponse
     {
         [JsonPropertyName("status")]
         public string Status {  get; set; }
