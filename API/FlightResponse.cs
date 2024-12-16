@@ -10,7 +10,7 @@ namespace API
     internal class FlightResponse
     {
         [JsonPropertyName("flights")]
-        public List<Flight> FlightList;
+        public List<Flight> FlightList { get; set; } = new List<Flight>();
         
     }
 }

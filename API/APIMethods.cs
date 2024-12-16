@@ -40,8 +40,8 @@ namespace API
 
         public static async Task<FlightResponse?> GetFlights() 
         {
-            string app_id = "";
-            string app_key = "";
+            string app_id = "67bb4aee";
+            string app_key = "baa2c9c89e13f6d12adf4a2ba7911662";
 
             using (HttpClient httpClient = new())
             {
@@ -52,14 +52,14 @@ namespace API
                 try
                 {
                     HttpResponseMessage response = await httpClient.GetAsync("https://api.schiphol.nl/public-flights/flights");
-                    response.EnsureSuccessStatusCode();
+                    //response.EnsureSuccessStatusCode();
 
                     string responseBody = await response.Content.ReadAsStringAsync();
                     Console.WriteLine(responseBody);
 
                     return JsonSerializer.Deserialize<FlightResponse>(responseBody);
                 }
-                catch (HttpRequestException ex)
+                catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
                     return null;

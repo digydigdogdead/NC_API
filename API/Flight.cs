@@ -10,7 +10,7 @@ namespace API
     internal class Flight
     {
         [JsonPropertyName("id")]
-        public int Id { get; set; } = 0;
+        public string Id { get; set; } = "";
 
         [JsonPropertyName("aircraftRegistration")]
         public string AircraftRegistration { get; set; } = "";
@@ -29,8 +29,8 @@ namespace API
 
         [JsonPropertyName("actualLandingTime")]
         public DateTime actualLandingTime { get; set; }
-
-
+        [JsonPropertyName("route")]
+        public Route Route { get; set; } = new Route();
 
     }
 }

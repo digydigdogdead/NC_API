@@ -11,11 +11,12 @@
 
             FlightResponse testResponse = await APIMethods.GetFlights();
             List<Flight> flights = testResponse.FlightList;
-            Console.WriteLine(testResponse.FlightList);
-            await Task.Delay(5000);
-            foreach (Flight flight in flights) 
+
+
+            //await Task.Delay(5000);
+            foreach (Flight flight in flights)
             {
-                Console.WriteLine(flight.Id);
+                Console.WriteLine(flight.Route.Destinations.Count);
             }
         }
     }
